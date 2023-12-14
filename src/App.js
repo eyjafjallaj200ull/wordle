@@ -27,7 +27,8 @@ function App() {
     .then(res => res.json())
     .then(json => {
       //random int between 0 and 49
-      const randomSolution = json[Math.floor(Math.random() * json.length)];
+      const solutions = json.solutions;
+      const randomSolution = solutions[Math.floor(Math.random() * solutions.length)];
       setSolution(randomSolution.word);
       setNewGame(true)
     })

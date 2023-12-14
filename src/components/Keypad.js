@@ -9,10 +9,10 @@ export default function Keypad({usedKeys, handleKeyup}) {
     const [letters, setLetters] = useState(null)
 
     useEffect(() => {
-        fetch("http://localhost:3001/letters")
+        fetch("https://eyjafjallaj200ull.github.io/wordle/db.json")
         .then(res => res.json())
         .then(json => {
-            setLetters(json)
+            setLetters(json.letters)
         })
     }, [])
 
