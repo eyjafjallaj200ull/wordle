@@ -23,7 +23,7 @@ function App() {
   })
 
   useEffect(() => {
-    fetch("http://localhost:3001/solutions")
+    fetch("https://eyjafjallaj200ull.github.io/wordle/db.json")
     .then(res => res.json())
     .then(json => {
       //random int between 0 and 49
